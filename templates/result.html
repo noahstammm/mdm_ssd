@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DeepMultilingualPunctuation App</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container mt-5">
+		<h1>Original Text:</h1>
+		<p>{{ text }}</p>
+		<h1>Punctuated Text:</h1>
+		<p id="punctuated-text">{{ punctuated_text }}</p>
+	</div>
+	<script src="{{ url_for('static', filename='punctuate.js') }}"></script>
+</body>
+</html>
