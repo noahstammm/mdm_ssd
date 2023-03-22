@@ -5,16 +5,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="container mt-5">
-        <h1>Zeichensetzungs App</h1>
-        <form id="punctuate-form" method="POST" action="/punctuate">
-            <div class="form-group">
-                <label for="text-input">Enter text:</label>
-                <textarea class="form-control" name="text" id="text-input" rows="5"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Punctuate</button>
-        </form>
-        <div id="result" class="mt-5"></div>
-    </div>
+<div class="container mt-5">
+    <h1>Zeichensetzungs App</h1>
+    <form id="punctuate-form" method="POST" action="/punctuate">
+        <div class="form-group">
+            <label for="text-input">Gib deinen Text ein, bei dem du die Zeichensetzuung setzen willst:</label>
+            <textarea class="form-control" name="text" id="text-input" rows="5"></textarea>
+            <button type="submit" class="btn btn-primary">Zeichen setzen</button>
+        </div>
+    </form>
+    <div id="result" class="mt-5"></div>
+</div>
 </body>
 </html>

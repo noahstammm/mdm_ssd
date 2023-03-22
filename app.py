@@ -12,11 +12,20 @@ def home():
 
 @app.route('/punctuate', methods=['POST'])
 def punctuate():
-    text = request.form['text']
-    print(text)
-    dmp = PunctuationModel()
-    punctuated_text = dmp.restore_punctuation(text)
-    return render_template('result.html', text=text, punctuated_text=punctuated_text)
+    try:
+        text = request.form['text']
+        print(text)
+        if len(text) > 0:
+            dmp = PunctuationModel()
+            punctuated_text = dmp.restore_punctuation(text)
+            return render_template('result.html', text=text, punctuated_text=punctuated_text)
+
+        else:
+            return render_template('result.html', error="Kein Text eingegeben")
+
+    except Exception as e:
+
+        return print("An error has occured", e)
 
 
 if __name__ == '__main__':
