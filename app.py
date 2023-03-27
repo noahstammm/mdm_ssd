@@ -14,7 +14,6 @@ def home():
 def punctuate():
     try:
         text = request.form['text']
-        print(text)
         if len(text) > 0:
             dmp = PunctuationModel()
             punctuated_text = dmp.restore_punctuation(text)
